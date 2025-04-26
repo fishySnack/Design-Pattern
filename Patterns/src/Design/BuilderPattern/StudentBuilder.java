@@ -6,20 +6,24 @@ public class StudentBuilder {
     private Long id;
     private double tuitionCost;
 
-    public void setName(String studentName) {
+    public StudentBuilder setName(String studentName) {
         this.studentName = studentName;
+        return this;
     }
 
-    public void setAge(int age) {
+    public StudentBuilder setAge(int age) {
         this.age = age;
+        return this;
     }
 
-    public void setId(Long id) {
+    public StudentBuilder setId(Long id) {
         this.id = id;
+        return this;
     }
 
-    public void setTuition(Double tuitionCost) {
+    public StudentBuilder setTuition(Double tuitionCost) {
         this.tuitionCost = tuitionCost;
+        return this;
     }
 
     public Student build() {
