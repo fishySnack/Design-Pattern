@@ -1,6 +1,8 @@
 package Design.BuilderPattern;
 
-public class Student {
+import Design.FactoryPattern.Person;
+
+public class Student implements Person {
     private String studentName;
     private int age;
     private Long id;
@@ -13,9 +15,18 @@ public class Student {
         this.tuitionCost = tuitionCost;
     }
 
-    @Override
+    public Student() {
+
+    }
+
+    @Override // implementation
     public String toString() {
         return "Student's name: " + studentName + " age: " + age +
                 " ID: " + id + " Tuition Cost " + tuitionCost;
+    }
+
+    @Override // required
+    public void speak() {
+        System.out.println("I am a student");
     }
 }
