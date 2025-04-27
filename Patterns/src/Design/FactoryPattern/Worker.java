@@ -9,6 +9,20 @@ public class Worker implements Person {
         this.income = income;
     }
 
+    public Worker() {
+
+    }
+
+    public Worker setName(String name) {
+        this.name = name;
+        return this;
+    }
+
+    public Worker setIncome(double income) {
+        this.income = income;
+        return this;
+    }
+
     @Override // required
     public void speak() {
         System.out.println("I am employed!");
