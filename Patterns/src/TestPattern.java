@@ -1,6 +1,10 @@
 import Design.Singleton;
 import Design.BuilderPattern.Student;
 import Design.BuilderPattern.StudentBuilder;
+import Design.FactoryPattern.Person;
+import Design.FactoryPattern.PersonFactory;
+import Design.FactoryPattern.Unemployed;
+import Design.FactoryPattern.Worker;
 
 public class TestPattern {
     public static void main(String[] args) throws Exception {
@@ -19,5 +23,12 @@ public class TestPattern {
                 .setName("John").build();
 
         System.out.println(builder2);
+
+        Student student = PersonFactory.createStudent("Justin");
+        student.speak();
+        Worker worker = PersonFactory.createWorker("John", 56000);
+        worker.speak();
+        Unemployed unemployed = PersonFactory.createUnemployed("Jake");
+        unemployed.speak();
     }
 }

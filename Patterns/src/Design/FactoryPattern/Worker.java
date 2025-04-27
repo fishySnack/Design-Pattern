@@ -25,7 +25,7 @@ public class Worker implements Person {
 
     @Override // required
     public void speak() {
-        System.out.println("I am employed!");
+        System.out.println("I am employed! Name: " + name + " Income: " + income);
     }
 
 }

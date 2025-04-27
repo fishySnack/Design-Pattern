@@ -18,6 +18,6 @@ public class Unemployed implements Person {
 
     @Override // required
     public void speak() {
-        System.out.println("I am unemployed!");
+        System.out.println("I am unemployed! Name: " + name);
     }
 }

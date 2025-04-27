@@ -3,16 +3,6 @@ package Design.FactoryPattern;
 import Design.BuilderPattern.Student;
 
 public class PersonFactory {
-    private String name;
-    private Double income;
-
-    public Unemployed creatUnemployed(String name) {
-        return new Unemployed(name);
-    }
-
-    public Worker creatWorker(String name, Double income) {
-        return new Worker(name, income);
-    }
 
     public static Person createPerson(String type) {
         if (type.equalsIgnoreCase("student"))
@@ -24,5 +14,17 @@ public class PersonFactory {
         else {
             throw new IllegalArgumentException();
         }
+    }
+
+    public static Student createStudent(String name) {
+        return new Student();
+    }
+
+    public static Worker createWorker(String name, double income) {
+        return new Worker(name, income);
+    }
+
+    public static Unemployed createUnemployed(String name) {
+        return new Unemployed(name);
     }
 }
