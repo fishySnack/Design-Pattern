@@ -12,4 +12,10 @@ public class Student {
         this.id = id;
         this.tuitionCost = tuitionCost;
     }
+
+    @Override
+    public String toString() {
+        return "Student's name: " + studentName + " age: " + age +
+                " ID: " + id + " Tuition Cost " + tuitionCost;
+    }
 }
